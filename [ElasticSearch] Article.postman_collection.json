@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "8c98ed45-0a4d-4613-bc74-de05993cbe85",
+		"name": "[ElasticSearch] Article",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Teoria da Relatividade\",\n    \"authorList\": [\n        {\n            \"nome\": \"Albert Einstein\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/article",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/article",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Article by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/article/oLTjFYQBeC-yzgpJsNW7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"oLTjFYQBeC-yzgpJsNW7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Article",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"oLTjFYQBeC-yzgpJsNW7\",\n    \"title\": \"Teoria da Relatividade II\",\n    \"authorList\": [\n        {\n            \"nome\": \"Albert Einstein\"\n        },\n        {\n            \"nome\": \"Niels Bohr\"\n        },\n        {\n            \"nome\": \"John Dalton\"\n        },\n        {\n            \"nome\": \"Marie Curie\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/article",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/article/oLTjFYQBeC-yzgpJsNW7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"oLTjFYQBeC-yzgpJsNW7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
